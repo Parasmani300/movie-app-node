@@ -9,7 +9,7 @@ const movieSearch = form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const movie = search.value
-    url = "http://localhost:3000/movie?title=" + movie
+    url = "/movie?title=" + movie
     fetch(url).then((response) => {
         response.json().then((data) => {
             movie_detail = data.body
